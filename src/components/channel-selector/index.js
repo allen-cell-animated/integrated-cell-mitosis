@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './style.scss';
 
 class ChannelSelector extends React.Component {
   constructor(props) {
@@ -12,36 +14,54 @@ class ChannelSelector extends React.Component {
 
   render() {
     return (
-      <div>
-        <input
-          type="radio"
-          id="All"
-          name="channels"
-          value="all"
-          onChange={this.selectChannel}
-        />
-        <label htmlFor="all">All</label>
-
-        <input
-          type="radio"
-          id="membraneAndDna"
-          name="channels"
-          value="membraneAndDna"
-          onChange={this.selectChannel}
-        />
-        <label htmlFor="membraneAndDna">Membrane and DNA</label>
-
-        <input
-          type="radio"
-          id="spinning"
-          name="channels"
-          value="spinning"
-          onChange={this.selectChannel}
-        />
-        <label htmlFor="spinning">Spinning</label>
+      <div className="input-group">
+        <label htmlFor="all">
+          <input
+            type="radio"
+            id="All"
+            name="channels"
+            value="all"
+            onChange={this.selectChannel}
+          />
+        All (Sec61-beta, Alpha-tubulin, DNA, Membrane)
+        </label>
+        <label htmlFor="membraneAndDna">
+          <input
+            type="radio"
+            id="membraneAndDna"
+            name="channels"
+            value="membraneAndDna"
+            onChange={this.selectChannel}
+          />
+        Membrane and DNA
+        </label>
+        <label htmlFor="all">
+          <input
+            type="radio"
+            id="membraneAndDnaSolid"
+            name="channels"
+            value="membraneAndDnaSolid"
+            onChange={this.selectChannel}
+          />
+        Membrane and DNA solid
+        </label>
+        <label htmlFor="spinning">
+          <input
+            type="radio"
+            id="spinning"
+            name="channels"
+            value="spinning"
+            onChange={this.selectChannel}
+          />
+          Spinning
+        </label>
       </div>
     );
   }
 }
+
+ChannelSelector.propTypes = {
+  changeChannel: PropTypes.func.isRequired,
+};
 
 export default ChannelSelector;

@@ -6,8 +6,14 @@ import InputNumber from 'antd/es/input-number';
 import Row from 'antd/es/row';
 import Col from 'antd/es/col';
 
+require('style-loader!css-loader!antd/es/style/index.css');
+require('style-loader!css-loader!antd/es/grid/style/index.css');
 
 require('style-loader!css-loader!antd/es/slider/style/index.css');
+require('style-loader!css-loader!antd/es/tooltip/style/index.css');
+require('style-loader!css-loader!antd/es/input-number/style/index.css');
+
+import './style.scss';
 
 class PlayBackSlider extends React.Component {
   constructor(props) {
@@ -21,7 +27,7 @@ class PlayBackSlider extends React.Component {
 
   render() {
     return (
-      <Row>
+      <Row className="slider-group">
         <Col span={12}>
           <Slider min={0} max={510} onChange={this.onChange} value={this.props.currentTime} />
         </Col>
