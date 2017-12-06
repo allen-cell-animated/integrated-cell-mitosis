@@ -4,6 +4,7 @@
   "description": "interactive playback of data",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server --inline --hot"
   },
