@@ -11,7 +11,7 @@ class ImagePlayer extends React.Component {
     const zeroPadding = '00000';
     const zerosNeeded = zeroPadding.length - currentTime.toString().length;
     const paddedNumber = zeroPadding.substring(0, zerosNeeded) + currentTime;
-    const imageSrc = `/images/${directory}/chimovie-${paddedNumber}.jpeg`;
+    const imageSrc = `__dirname/../../images/${directory}/chimovie-${paddedNumber}.jpeg`;
     return (
       <div className="image-holder">
         <img alt="modeled mitotic cell" src={imageSrc} />
