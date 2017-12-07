@@ -1,0 +1,28 @@
+.input-group label {
+  display: block;
+  padding-left: 1em;
+}
+
+.input-group input {
+  padding-right: 1em;
+}
+
+header {
+  background: white;
+}
+
+.image-holder {
+  width: 100%;
+}
+
+.image-holder img {
+  width: 100%;
+}
+
+.slider-group {
+  margin: 3em;
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=bundle.aa87f265ce813a832dd1.css.map*/
