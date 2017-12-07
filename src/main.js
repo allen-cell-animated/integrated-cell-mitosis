@@ -33,7 +33,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <Header />
         <ChannelSelector
           changeChannel={this.changeChannel}
